@@ -77,7 +77,7 @@ public class Hra implements IHra {
         if (platnePrikazy.jePlatnyPrikaz(slovoPrikazu)) {
             IPrikaz prikaz = platnePrikazy.vratPrikaz(slovoPrikazu);
             textKVypsani = prikaz.proved(parametry);
-            if (herniPlan.getAktualniProstor() == herniPlan.getViteznyProstor()  ) {
+            if (herniPlan.getAktualniProstor() == herniPlan.getViteznyProstor() && neseVinoABabovku()) {
                 konecHry = true ;
                 textKVypsani = textKVypsani + "\n Hurá";
             }
@@ -87,9 +87,17 @@ public class Hra implements IHra {
         }
         return textKVypsani;
     }
-    
-    
-     /**
+
+    private boolean neseVinoABabovku() {
+        if(batoh.nazvyVeci().contains("babovka") && batoh.nazvyVeci().contains("vino")) {
+            return true;
+        }
+
+        return false;
+    }
+
+
+    /**
      *  Nastaví, že je konec hry, metodu využívá třída PrikazKonec,
      *  mohou ji použít i další implementace rozhraní Prikaz.
      *  
