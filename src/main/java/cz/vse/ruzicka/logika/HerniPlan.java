@@ -50,7 +50,11 @@ public class HerniPlan {
         aktualniProstor = domecek;  // hra začíná v domečku  
         viteznyProstor = chaloupka ;
         les.vlozVec(new Vec("maliny", true));
-        les.vlozVec(new Vec("strom", false));  
+        les.vlozVec(new Vec("strom", false));
+        domecek.vlozVec(new Vec("babovka", true));
+        domecek.vlozVec(new Vec("vino", true));
+        chaloupka.vlozVec(new Vec("babicka", false));
+
     }
     
     /**
