@@ -1,9 +1,6 @@
 package cz.vse.ruzicka.logika;
 
 
-import cz.vse.ruzicka.logika.Hra;
-import cz.vse.ruzicka.logika.PrikazJdi;
-import cz.vse.ruzicka.logika.PrikazKonec;
 import org.junit.Before;
 import org.junit.Test;
 
