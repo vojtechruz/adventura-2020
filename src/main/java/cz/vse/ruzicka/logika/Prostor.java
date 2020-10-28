@@ -121,6 +121,10 @@ public class Prostor {
                 + popisVychodu()+ "\n" + nazvyVeci ();
     }
 
+    public String getPopis() {
+        return popis;
+    }
+
     /**
      * Vrací textový řetězec, který popisuje sousední východy, například:
      * "vychody: hala ".

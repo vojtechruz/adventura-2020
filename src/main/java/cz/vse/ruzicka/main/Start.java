@@ -60,7 +60,8 @@ public class Start extends Application
         primaryStage.setScene(scene);
 
         MainController controller = loader.getController();
-        controller.init();
+        IHra hra = new Hra();
+        controller.init(hra);
         primaryStage.show();
     }
 }
