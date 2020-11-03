@@ -23,7 +23,7 @@ public class Prostor {
     private String nazev;
     private String popis;
     private Set<Prostor> vychody;   // obsahuje sousední místnosti
- private Map<String, Vec> seznamVeci ;   // seznam věcí v prostoru
+    private Map<String, Vec> seznamVeci ;   // seznam věcí v prostoru
     /**
      * Vytvoření prostoru se zadaným popisem, např. "kuchyň", "hala", "trávník
      * před domem"
@@ -37,6 +37,10 @@ public class Prostor {
         this.popis = popis;
         vychody = new HashSet<>();
         seznamVeci = new HashMap<String, Vec>();
+    }
+
+    public Map<String, Vec> getSeznamVeci() {
+        return seznamVeci;
     }
 
     /**

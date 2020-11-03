@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<?import javafx.scene.control.Label?>
 <BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.vse.ruzicka.MainController">
    <top>
       <VBox BorderPane.alignment="CENTER">
-          <Label fx:id="locationName"></Label>
-          <Label fx:id="locationDescription"></Label>
+          <Label fx:id="locationName" />
+          <Label fx:id="locationDescription" />
       </VBox>
    </top>
+   <right>
+       <VBox spacing="30">
+            <!--Vychody-->
+            <VBox spacing="10">
+                <Label>
+                    <text>
+                        Vychody
+                    </text>
+                   <font>
+                      <Font name="System Bold" size="14.0" />
+                   </font>
+                </Label>
+                <VBox fx:id="exits" spacing="10">
+                    <!--Sem se budou vkladat vychody-->
+                </VBox>
+            </VBox>
+            <!--Batoh-->
+            <!--Predmety-->
+           <VBox spacing="10">
+               <Label>
+                   <text>
+                       Predmety
+                   </text>
+                   <font>
+                       <Font name="System Bold" size="14.0" />
+                   </font>
+               </Label>
+               <VBox fx:id="items" spacing="10">
+                   <!--Sem se budou vkladat predmety v dane lokaci-->
+               </VBox>
+           </VBox>
+       </VBox>
+   </right>
+   <bottom>
+       <VBox>
+           <TextArea fx:id="textOutput"></TextArea>
+           <TextField fx:id="textInput"></TextField>
+       </VBox>
+   </bottom>
 </BorderPane>
