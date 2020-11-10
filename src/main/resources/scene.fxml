@@ -4,7 +4,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.vse.ruzicka.MainController">
+<BorderPane stylesheets="styles.css"
+        xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.vse.ruzicka.MainController">
    <top>
       <VBox BorderPane.alignment="CENTER">
           <Label fx:id="locationName" />
@@ -46,8 +47,8 @@
    </right>
    <bottom>
        <VBox>
-           <TextArea fx:id="textOutput"></TextArea>
-           <TextField fx:id="textInput"></TextField>
+           <TextArea fx:id="textOutput" editable="false"></TextArea>
+           <TextField fx:id="textInput" onKeyPressed="#onInputKeyPressed"></TextField>
        </VBox>
    </bottom>
 </BorderPane>
